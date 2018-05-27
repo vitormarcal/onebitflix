@@ -1,10 +1,16 @@
 class Api::V1::SerieSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :id, :title, :description, thumbnail_key, featured_thumbnail_key
+  attributes :id, :title, :description
   has_many :episodes, record_type: :movies, serializer: :movie
 
-  attribute :type do |object|
-    'serie'
+  attribute :episodes do |object|
+    object.episodes.map do |e|
+      {
+          title: e.title,
+          id: e.id,
+          thumbnail_url:  AWS_BUCKET.object("thumbnails/#{e.thumbnail_key}").presigned_url(:get, expires_in: 120)
+      }
+    end
   end
 
   attribute :category do |object|
@@ -19,7 +25,7 @@ class Api::V1::SerieSerializer
     object.reviews.count
   end
 
-  attribute :favorite do |object|
+  attribute :favorite do |object, params|
     if params.present? && params.has_key?(:user)
       params[:user].favorites.where(favoritable: object).exists?
     end
@@ -34,8 +40,8 @@ class Api::V1::SerieSerializer
   end
 
   attribute :featured_thumbnail_url do |object|
-    if object[:featured_thumbnail_key​].present?
-      "/videos/#{object.video_key}"
+    if object[:featured_thumbnail_key].present?
+      "/thumbnails/#{object.featured_thumbnail_key}"
     end
   end
 end

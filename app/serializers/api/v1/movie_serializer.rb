@@ -1,13 +1,10 @@
 class Api::V1::MovieSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :id​, :title​, :description​, :episode_number​, thumbnail_key, :featured_thumbnail_key​, :video_key​, :serie_id
-
-  attribute :type do |object|
-    'serie'
-  end
+  attributes :id, :title, :description, :episode_number, :serie_id
+  belongs_to :serie
 
   attribute :category do |object|
-    object.category.name
+    object.category&.name
   end
 
   attribute :reviews_count do |object|
@@ -29,12 +26,12 @@ class Api::V1::MovieSerializer
   end
 
   attribute :featured_thumbnail_url do |object|
-    if object[:featured_thumbnail_key​].present?
+    if object[:featured_thumbnail_key].present?
       "/thumbnails/#{object.featured_thumbnail_key}"
     end
   end
 
-  attribute :thumbnail_cover_url do |object|
+  attribute :video_url do |object|
     "/videos/#{object.video_key}"
   end
 end
