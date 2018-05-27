@@ -23,4 +23,24 @@ class Api::V1::WatchableSerializer
       object.featured_thumbnail_key
     end
   end
+
+  attribute :thumbnail_url do |object|
+    "/thumbnails/#{object.thumbnail_key}"
+  end
+
+  attribute :thumbnail_cover_url do |object|
+    "/thumbnails/#{object.thumbnail_cover_key}"
+  end
+
+  attribute :featured_thumbnail_url do |object|
+    if object[:featured_thumbnail_key​].present?
+      "/thumbnails/#{object.featured_thumbnail_key}"
+    end
+  end
+
+  attribute :video_url do |object|
+    if object[:video_key].present?
+      "/videos/#{object.video_key}"
+    end
+  end
 end
