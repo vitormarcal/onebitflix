@@ -17,9 +17,9 @@ class Movie < ApplicationRecord
 
   private
 
-  def highlight_episode
-    if self.serie.present? && self.highlighted == true
-      errors.add(:highlight_episode, "It's not possible to highlight an serie episode")
+    def highlight_episode
+      if self.serie.present? && self.highlighted == true
+        errors.add(:highlight_episode, "It's not possible to highlight an serie episode")
+      end
     end
-  end
 end
