@@ -8,7 +8,7 @@ class Api::V1::SerieSerializer
       {
           title: e.title,
           id: e.id,
-          thumbnail_url:  AWS_BUCKET.object("thumbnails/#{e.thumbnail_key}").presigned_url(:get, expires_in: 120)
+          thumbnail_url: "/thumbnails/#{e.thumbnail_key}"
       }
     end
   end

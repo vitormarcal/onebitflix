@@ -1,5 +1,6 @@
 module Highlightable
   extend ActiveSupport::Concern
+  
   included do
     validate :single_highlight
 

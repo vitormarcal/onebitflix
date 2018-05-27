@@ -7,6 +7,6 @@ class Api::V1::CategorySerializer
   end
 
   attribute :series do |object|
-    Api::V1::SerieSerializer.new(object.movies).serializable_hash
+    Api::V1::SerieSerializer.new(object.series).serializable_hash
   end
 end

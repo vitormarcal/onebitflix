@@ -8,14 +8,14 @@ class Api::V1::DashboardsController < ApplicationController
 
   private
 
-  def type_params
-    params[:type] ||= "category"
-    type_whitelist
-  end
-
-  def type_whitelist
-    unless ["category", "keep_watching", "highlight"].include?(params[:type])
-      render json: { errors: "Unpermitted type parameter" }, status: :forbidden
+    def type_params
+      params[:type] ||= "category"
+      type_whitelist
     end
-  end
+
+    def type_whitelist
+      unless ["category", "keep_watching", "highlight"].include?(params[:type])
+        render json: { errors: "Unpermitted type parameter" }, status: :forbidden
+      end
+    end
 end

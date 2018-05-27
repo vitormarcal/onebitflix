@@ -2,7 +2,7 @@
   <v-app>
     <Header/>
     <v-content>
-      <h4 class="white--text">Main Component</h4>
+      <router-view :key="$route.fullPath"></router-view>
     </v-content>
     <Footer/>
   </v-app>
@@ -15,7 +15,7 @@
   export default {
     data () {
       return {
-
+      
       }
     },
     components: {
