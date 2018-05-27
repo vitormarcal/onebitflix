@@ -1,10 +1,19 @@
 {
-  "app.css": "/packs/app-6ec917316929a0f129d9619bcc7b214f.css",
-  "app.css.map": "/packs/app-6ec917316929a0f129d9619bcc7b214f.css.map",
-  "app.js": "/packs/app-4ad1fcaf33beb1ba1791.js",
-  "app.js.map": "/packs/app-4ad1fcaf33beb1ba1791.js.map",
-  "application.css": "/packs/application-4e2b74623caca937b1462165d687f141.css",
-  "application.css.map": "/packs/application-4e2b74623caca937b1462165d687f141.css.map",
-  "application.js": "/packs/application-004c1d8207301c7d839e.js",
-  "application.js.map": "/packs/application-004c1d8207301c7d839e.js.map"
+  "app.css": "/packs/app-7fe10ffb229297238af347a0210083e9.css",
+  "app.css.map": "/packs/app-7fe10ffb229297238af347a0210083e9.css.map",
+  "app.js": "/packs/app-f6717bcafa2fd402baee.js",
+  "app.js.map": "/packs/app-f6717bcafa2fd402baee.js.map",
+  "application.css": "/packs/application-f65a0107b5db3dc157877c2ad1105537.css",
+  "application.css.map": "/packs/application-f65a0107b5db3dc157877c2ad1105537.css.map",
+  "application.js": "/packs/application-a01e1c4279c10737997f.js",
+  "application.js.map": "/packs/application-a01e1c4279c10737997f.js.map",
+  "components/shared/footer.css": "/packs/components/shared/footer-9e469f9f01cf48ac7499fddb60354d66.css",
+  "components/shared/footer.css.map": "/packs/components/shared/footer-9e469f9f01cf48ac7499fddb60354d66.css.map",
+  "components/shared/footer.js": "/packs/components/shared/footer-b097171f5a3d50a04d7e.js",
+  "components/shared/footer.js.map": "/packs/components/shared/footer-b097171f5a3d50a04d7e.js.map",
+  "components/shared/header.css": "/packs/components/shared/header-5573dfeeca42760fbd4cbb08d6d4aec7.css",
+  "components/shared/header.css.map": "/packs/components/shared/header-5573dfeeca42760fbd4cbb08d6d4aec7.css.map",
+  "components/shared/header.js": "/packs/components/shared/header-6afb9dbc752cf8a05b68.js",
+  "components/shared/header.js.map": "/packs/components/shared/header-6afb9dbc752cf8a05b68.js.map",
+  "packs/assets/logo.png": "/packs/packs/assets/logo-eeb83d2c6c039c253a9f64131228ee71.png"
 }
